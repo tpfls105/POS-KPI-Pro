@@ -250,11 +250,6 @@ header{
 
     transition:.2s;
 
-.counter button span{
-    display:block;
-    transform:translateX(-1px);
-}
-
 .counter button:hover{
 
     background:var(--main);
@@ -387,9 +382,6 @@ button{
     padding:12px 18px;
 
     border-radius:10px;
-
-    -webkit-appearance:none;
-    appearance:none;
 
     cursor:pointer;
 
