@@ -388,6 +388,9 @@ button{
 
     border-radius:10px;
 
+    -webkit-appearance:none;
+    appearance:none;
+
     cursor:pointer;
 
     transition:.2s;
