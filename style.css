@@ -250,14 +250,14 @@ header{
 
     transition:.2s;
 
-background:red !important;
-
+.counter button span{
+    display:block;
+    transform:translateX(-1px);
 }
-
 
 .counter button:hover{
 
-    background:var(--mainHover);
+    background:var(--main);
 
     transform:scale(1.08);
 
