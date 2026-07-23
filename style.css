@@ -1,0 +1,440 @@
+/* =======================================================
+   POS KPI PRO
+   Version : 1.0
+   Author : ChatGPT
+=======================================================*/
+
+:root{
+
+    --bg:#121212;
+    --card:#1d1d1d;
+    --card2:#252525;
+
+    --border:#333;
+
+    --main:#ff0066;
+    --mainHover:#ff3385;
+
+    --green:#2ecc71;
+    --blue:#3fa9ff;
+    --yellow:#ffc107;
+    --red:#ff5d5d;
+
+    --text:#ffffff;
+    --sub:#9d9d9d;
+
+    --radius:16px;
+
+    --shadow:
+        0 10px 25px rgba(0,0,0,.35);
+
+}
+
+*{
+
+    margin:0;
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:
+        Pretendard,
+        "Noto Sans KR",
+        sans-serif;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    padding:30px;
+
+}
+
+#app{
+
+    max-width:1400px;
+
+    margin:auto;
+
+}
+
+header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-end;
+
+    gap:30px;
+
+    margin-bottom:25px;
+
+}
+
+.title h1{
+
+    font-size:38px;
+
+    font-weight:700;
+
+}
+
+.title p{
+
+    color:var(--sub);
+
+    margin-top:8px;
+
+}
+
+.storeBox{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:15px;
+
+}
+
+.storeBox div{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.storeBox label{
+
+    margin-bottom:7px;
+
+    color:var(--sub);
+
+    font-size:14px;
+
+}
+
+.storeBox input{
+
+    background:var(--card);
+
+    color:white;
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    padding:13px;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.2s;
+
+}
+
+.storeBox input:focus{
+
+    border-color:var(--main);
+
+}
+
+.card{
+
+    background:var(--card);
+
+    border-radius:var(--radius);
+
+    padding:25px;
+
+    margin-bottom:22px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.card h2{
+
+    margin-bottom:20px;
+
+    font-size:24px;
+
+}
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fill,minmax(280px,1fr));
+
+    gap:18px;
+
+}
+
+.counterItem{
+
+    background:var(--card2);
+
+    border-radius:14px;
+
+    padding:16px;
+
+}
+
+.counterItem span{
+
+    display:block;
+
+    margin-bottom:14px;
+
+    color:#ddd;
+
+}
+
+.counter{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.counter button{
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--main);
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.counter button:hover{
+
+    background:var(--mainHover);
+
+    transform:scale(1.08);
+
+}
+
+.counter button:active{
+
+    transform:scale(.95);
+
+}
+
+.counter input{
+
+    width:80px;
+
+    background:none;
+
+    border:none;
+
+    text-align:center;
+
+    color:white;
+
+    font-size:26px;
+
+    font-weight:bold;
+
+}
+
+.kpiGrid{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fill,minmax(220px,1fr));
+
+    gap:18px;
+
+}
+
+.kpiGrid input,
+.kpiGrid textarea{
+
+    width:100%;
+
+    background:#292929;
+
+    color:white;
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    padding:12px;
+
+    margin-top:6px;
+
+}
+
+.dashboard{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(180px,1fr));
+
+    gap:18px;
+
+}
+
+.dash{
+
+    background:var(--card2);
+
+    border-radius:14px;
+
+    padding:20px;
+
+    text-align:center;
+
+}
+
+.dash p{
+
+    color:var(--sub);
+
+    margin-bottom:12px;
+
+}
+
+.dash h3{
+
+    font-size:36px;
+
+    color:var(--green);
+
+}
+
+.reportButtons{
+
+    margin-bottom:15px;
+
+}
+
+.reportButtons button{
+
+    margin-right:10px;
+
+}
+
+button{
+
+    background:var(--main);
+
+    color:white;
+
+    border:none;
+
+    padding:12px 18px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+button:hover{
+
+    background:var(--mainHover);
+
+}
+
+textarea{
+
+    width:100%;
+
+    background:#101010;
+
+    color:#7CFF9B;
+
+    border:1px solid #333;
+
+    border-radius:12px;
+
+    padding:15px;
+
+    resize:vertical;
+
+    line-height:1.6;
+
+}
+
+footer{
+
+    text-align:center;
+
+    color:#777;
+
+    padding:25px 0;
+
+}
+
+@media(max-width:900px){
+
+header{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.storeBox{
+
+    width:100%;
+
+    grid-template-columns:1fr;
+
+}
+
+body{
+
+    padding:15px;
+
+}
+
+.title h1{
+
+    font-size:30px;
+
+}
+
+}

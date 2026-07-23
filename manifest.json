@@ -1,0 +1,19 @@
+{
+  "name": "POS KPI Pro",
+  "short_name": "KPI Pro",
+  "description": "LGU+ 매장 마감보고 자동화 시스템",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#171717",
+  "theme_color": "#171717",
+
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

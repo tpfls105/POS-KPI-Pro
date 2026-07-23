@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>POS KPI Pro</title>
+
+<meta name="application-name" content="POS KPI Pro">
+
+<link rel="manifest" href="manifest.json">
+
+<link rel="stylesheet" href="style.css">
+
+<meta name="theme-color" content="#171717">
+
+<link rel="icon" href="icon.png">
+
+<link rel="apple-touch-icon" href="icon.png">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+</head>
+
+
+<body>
+
+
+<div id="app">
+
+
+<header>
+
+<div class="title">
+
+<h1>POS KPI Pro</h1>
+
+<p>LGU+ 마감보고 자동화</p>
+
+</div>
+
+
+<div class="storeBox">
+
+
+<div>
+
+<label>매장명</label>
+
+<input
+id="storeName"
+placeholder="풍덕천동_로얄점">
+
+</div>
+
+
+<div>
+
+<label>점장명</label>
+
+<input
+id="managerName"
+placeholder="조의인">
+
+</div>
+
+
+<div>
+
+<label>보고일</label>
+
+<input
+type="date"
+id="reportDate">
+
+</div>
+
+
+</div>
+
+</header>
+
+
+
+<main>
+
+
+
+<!-- ================= 모바일 KPI ================= -->
+
+
+<section class="card">
+
+
+<h2>📱 모바일 KPI</h2>
+
+
+<div class="grid">
+
+
+<div class="counterItem">
+
+<span>MNP</span>
+
+<div class="counter">
+
+<button class="minus" data-target="mnp">−</button>
+
+<input id="mnp" value="0" readonly>
+
+<button class="plus" data-target="mnp">＋</button>
+
+</div>
+
+</div>
+
+
+
+<div class="counterItem">
+
+<span>010 신규</span>
+
+<div class="counter">
+
+<button class="minus" data-target="new010">−</button>
+
+<input id="new010" value="0" readonly>
+
+<button class="plus" data-target="new010">＋</button>
+
+</div>
+
+</div>
+
+
+
+<div class="counterItem">
+
+<span>기변115</span>
+
+<div class="counter">
+
+<button class="minus" data-target="change115">−</button>
+
+<input id="change115" value="0" readonly>
+
+<button class="plus" data-target="change115">＋</button>
+
+</div>
+
+</div>
+
+
+
+<div class="counterItem">
+
+<span>기변85~105</span>
+
+<div class="counter">
+
+<button class="minus" data-target="change85">−</button>
+
+<input id="change85" value="0" readonly>
+
+<button class="plus" data-target="change85">＋</button>
+
+</div>
+
+</div>
+
+
+
+<div class="counterItem">
+
+<span>시니어/VAS</span>
+
+<div class="counter">
+
+<button class="minus" data-target="senior">−</button>
+
+<input id="senior" value="0" readonly>
+
+<button class="plus" data-target="senior">＋</button>
+
+</div>
+
+</div>
+
+
+
+<div class="counterItem">
+
+<span>청소년</span>
+
+<div class="counter">
+
+<button class="minus" data-target="youth">−</button>
+
+<input id="youth" value="0" readonly>
+
+<button class="plus" data-target="youth">＋</button>
+
+</div>
+
+</div>
+
+
+
+<div class="counterItem">
+
+<span>LVC</span>
+
+<div class="counter">
+
+<button class="minus" data-target="lvc">−</button>
+
+<input id="lvc" value="0" readonly>
+
+<button class="plus" data-target="lvc">＋</button>
+
+</div>
+
+</div>
+
+
+
+<div class="counterItem">
+
+<span>중고MNP 1점</span>
+
+<div class="counter">
+
+<button class="minus" data-target="used1">−</button>
+
+<input id="used1" value="0" readonly>
+
+<button class="plus" data-target="used1">＋</button>
+
+</div>
+
+</div>
+
+
+
+<div class="counterItem">
+
+<span>중고MNP 0.5점</span>
+
+<div class="counter">
+
+<button class="minus" data-target="used05">−</button>
+
+<input id="used05" value="0" readonly>
+
+<button class="plus" data-target="used05">＋</button>
+
+</div>
+
+</div>
+
+
+
+<div class="counterItem">
+
+<span>2nd Device</span>
+
+<div class="counter">
+
+<button class="minus" data-target="second">−</button>
+
+<input id="second" value="0" readonly>
+
+<button class="plus" data-target="second">＋</button>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ================= 홈 KPI ================= -->
+
+
+<section class="card">
+
+
+<h2>🏠 홈 KPI</h2>
+
+
+<div class="grid">
+
+
+<div class="counterItem">
+
+<span>인터넷 청약</span>
+
+<div class="counter">
+
+<button class="minus" data-target="internetContract">−</button>
+
+<input id="internetContract" value="0" readonly>
+
+<button class="plus" data-target="internetContract">＋</button>
+
+</div>
+
+</div>
+
+
+
+<div class="counterItem">
+
+<span>인터넷 설치</span>
+
+<div class="counter">
+
+<button class="minus" data-target="internetInstall">−</button>
+
+<input id="internetInstall" value="0" readonly>
+
+<button class="plus" data-target="internetInstall">＋</button>
+
+</div>
+
+</div>
+
+
+
+<div class="counterItem">
+
+<span>티비프리</span>
+
+<div class="counter">
+
+<button class="minus" data-target="tvFree">−</button>
+
+<input id="tvFree" value="0" readonly>
+
+<button class="plus" data-target="tvFree">＋</button>
+
+</div>
+
+</div>
+
+
+
+<div class="counterItem">
+
+<span>스마트홈</span>
+
+<div class="counter">
+
+<button class="minus" data-target="smartHome">−</button>
+
+<input id="smartHome" value="0" readonly>
+
+<button class="plus" data-target="smartHome">＋</button>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+<!-- ================= KPI 입력 ================= -->
+
+
+<section class="card">
+
+<h2>📊 KPI 입력</h2>
+
+
+<div class="kpiGrid">
+
+
+
+<div>
+<label>총판매 누적</label>
+<input id="totalSaleAcc" type="number" value="0">
+</div>
+
+
+<div>
+<label>MNP 누적</label>
+<input id="mnpAcc" type="number" value="0">
+</div>
+
+
+<div>
+<label>매출포인트 누적</label>
+<input id="pointAcc" type="number" step="0.1" value="0">
+</div>
+
+
+<div>
+<label>맞춤제안 당일</label>
+<input id="customToday" type="number" value="0">
+</div>
+
+
+<div>
+<label>맞춤제안 누적</label>
+<input id="customAcc" type="number" value="0">
+</div>
+
+
+<div>
+<label>중고MNP 누적</label>
+<input id="usedAcc" type="number" value="0">
+</div>
+
+
+
+
+<div>
+<label>인터넷 설치 누적</label>
+<input id="internetAcc" type="number" value="0">
+</div>
+
+
+<div>
+<label>TV프리 누적</label>
+<input id="tvFreeAcc" type="number" value="0">
+</div>
+
+
+<div>
+<label>스마트홈 누적</label>
+<input id="smartAcc" type="number" value="0">
+</div>
+
+
+
+
+<div>
+<label>고객민원 당일</label>
+<input id="complainToday" type="number" value="0">
+</div>
+
+<div>
+<label>고객민원 누적</label>
+<input id="complainAcc" type="number" value="0">
+</div>
+
+
+<div>
+<label>T-NPS 점수</label>
+<input id="tnpsScore" value="0">
+</div>
+
+
+<div>
+<label>T-NPS 응답률</label>
+<input id="tnpsRate" placeholder="22%">
+</div>
+
+
+
+<div>
+<label>매장 LEVEL</label>
+<input id="level">
+</div>
+
+
+<div>
+<label>표준화점검</label>
+<input id="standard">
+</div>
+
+
+
+
+<div>
+<label>UCRM 타사</label>
+<input id="ucrmToday" value="0">
+</div>
+
+
+<div>
+<label>UCRM 누적</label>
+<input id="ucrmAcc" value="0">
+</div>
+
+
+
+<div>
+<label>총원 현재</label>
+<input id="memberNow" value="0">
+</div>
+
+
+<div>
+<label>TO</label>
+<input id="memberTo" value="0">
+</div>
+
+
+
+<div>
+<label>인당생산성</label>
+<input id="productivity" value="0">
+</div>
+
+
+
+<div>
+<label>내방객 금일</label>
+<input id="visitorToday" value="0">
+</div>
+
+
+<div>
+<label>내방객 누적</label>
+<input id="visitorAcc" value="0">
+</div>
+
+
+
+
+<div>
+<label>예약가입 등록</label>
+<input id="reserveCount" value="0">
+</div>
+
+
+<div>
+<label>예약가입 목표</label>
+<input id="reserveGoal" value="0">
+</div>
+
+
+
+
+<div>
+<label>OB콜</label>
+<input id="obCall">
+</div>
+
+
+<div>
+<label>내방약속</label>
+<input id="visitPromise">
+</div>
+
+
+
+<div>
+<label>외부활동</label>
+<textarea id="outsideWork"></textarea>
+</div>
+
+
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- ================= 계산 결과 ================= -->
+
+
+<section class="card">
+
+
+<h2>📈 실시간 계산</h2>
+
+
+<div class="dashboard">
+
+
+<div class="dash">
+
+<p>총판매</p>
+
+<h3 id="totalSaleResult">0</h3>
+
+</div>
+
+
+
+<div class="dash">
+
+<p>MNP</p>
+
+<h3 id="mnpResult">0</h3>
+
+</div>
+
+
+
+<div class="dash">
+
+<p>매출포인트</p>
+
+<h3 id="pointResult">0</h3>
+
+</div>
+
+
+
+<div class="dash">
+
+<p>예상판매</p>
+
+<h3 id="expectedSale">0</h3>
+
+</div>
+
+
+
+<div class="dash">
+
+<p>예상인터넷</p>
+
+<h3 id="expectedInternet">0</h3>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ================= 보고서 ================= -->
+
+
+<section class="card">
+
+
+<h2>📋 마감보고</h2>
+
+
+<div class="reportButtons">
+
+
+<button id="generateReport">
+마감보고 생성
+</button>
+
+
+<button id="copyReport">
+복사
+</button>
+
+
+<button id="resetMonth">
+월초 초기화
+</button>
+
+
+</div>
+
+
+
+<textarea
+id="report"
+rows="28"
+readonly
+placeholder="마감보고 생성 버튼을 눌러주세요.">
+</textarea>
+
+
+
+</section>
+
+
+
+
+
+</main>
+
+
+
+
+<footer>
+ 
+<p>
+POS KPI Pro v1.0
+</p>
+
+</footer>
+
+
+
+</div>
+
+
+
+
+<script src="js/storage.js"></script>
+
+<script src="js/calculator.js"></script>
+
+<script src="js/report.js"></script>
+
+<script src="js/ui.js"></script>
+
+<script src="js/app.js"></script>
+
+<script>
+
+if("serviceWorker" in navigator){
+
+window.addEventListener(
+"load",
+()=>{
+
+navigator.serviceWorker.register("./sw.js")
+.then(
+()=>{
+console.log("PWA Service Worker 등록 완료");
+}
+)
+
+.catch(
+(err)=>{
+console.log(err);
+}
+);
+
+});
+
+}
+
+</script>
+
+</body>
+
+</html>
