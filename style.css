@@ -219,11 +219,9 @@ header{
 .counter button{
 
     width:45px;
-
     height:45px;
 
     border:none;
-
     border-radius:50%;
 
     background:var(--main);
@@ -235,6 +233,9 @@ header{
     cursor:pointer;
 
     transition:.2s;
+
+    padding:0;
+    line-height:45px;
 
 }
 
