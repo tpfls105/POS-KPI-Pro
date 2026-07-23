@@ -210,32 +210,22 @@ header{
 
     display:flex;
 
-    justify-content:space-between;
+    justify-content:center;
 
     align-items:center;
+
+    gap:10px;
 
 }
 
 .counter button{
 
-    width:45px;
-    height:45px;
-
-    border:none;
-    border-radius:50%;
-
-    background:var(--main);
-
-    color:white;
-
-    font-size:22px;
-
-    cursor:pointer;
-
-    transition:.2s;
-
+    width:32px;
+    height:32px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     padding:0;
-    line-height:45px;
 
 }
 
@@ -435,6 +425,19 @@ body{
 .title h1{
 
     font-size:30px;
+
+}
+
+
+/* 추가 */
+.counterItem{
+    padding:12px;
+}
+
+.counter input{
+    width:50px;
+    font-size:22px;
+}
 
 }
 
